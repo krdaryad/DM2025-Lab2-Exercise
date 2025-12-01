@@ -1,0 +1,226 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+Movie Review: Inception (2010)
+Christopher Nolan’s Inception is a <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">cinematic puzzle box that <span class="lx-highlight" data-idx="1" style="background-color:#D2E3FC;">continues to fascinate audiences</span></span> 
+more than a decade after its release. At its core, the film is a heist story, but instead of vaults 
+and jewels, the treasure lies within the human subconscious. Nolan crafts a narrative that is 
+both <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">intellectually stimulating and emotionally resonant</span>, blending science fiction spectacle 
+with deeply personal stakes.
+The film follows Dom Cobb (Leonardo DiCaprio), a skilled “extractor” who steals secrets from 
+people’s dreams. Haunted by the memory of his late wife Mal (Marion Cotillard), Cobb is 
+offered one final job: not to steal an idea, but to plant one—a process known as inception. The 
+target is Robert Fischer (Cillian Murphy), heir to a corporate empire. Success would allow 
+Cobb to return home to his children, but failure could trap him in a labyrinth of dreams 
+forever.
+What makes Inception remarkable is its <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">layered structure</span>. Nolan constructs dreams within 
+dreams, each with its own rules of time and physics. The famous “rotating hallway” fight 
+scene, shot practically with a massive spinning set, exemplifies his <span class="lx-highlight" data-idx="4" style="background-color:#C8E6C9;">commitment to grounding 
+surreal concepts in tangible visuals</span>. Hans Zimmer’s score, with its iconic brass blasts derived 
+from Edith Piaf’s “Non, je ne regrette rien,” <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">adds urgency and grandeur</span>, <span class="lx-highlight" data-idx="6" style="background-color:#D2E3FC;">making the film feel 
+both epic and intimate</span>.
+Beyond spectacle, Inception <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">explores themes of memory, guilt, and the fragility of reality</span>. 
+Cobb’s emotional journey—his inability to let go of Mal—<span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">anchors the film</span>. While audiences 
+debate whether the final spinning top falls or not, the true resolution lies in Cobb’s choice to 
+embrace his children, regardless of whether he is in reality or a dream. Nolan <span class="lx-highlight" data-idx="9" style="background-color:#D2E3FC;">leaves us 
+questioning not just the ending, but the nature of perception itself</span>.
+<span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">Performances are uniformly strong</span>. DiCaprio brings <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">tortured intensity</span>, Cotillard <span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">embodies 
+both allure and menace</span>, and supporting players like Joseph Gordon-Levitt, Ellen Page, and 
+Tom Hardy <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">add charm and wit</span>. The ensemble <span class="lx-highlight" data-idx="14" style="background-color:#C8E6C9;">elevates the film beyond its cerebral premise</span>, 
+<span class="lx-highlight" data-idx="15" style="background-color:#D2E3FC;">making it accessible and human</span>.
+Ultimately, Inception succeeds because it <span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">balances blockbuster thrills with philosophical 
+inquiry</span>. It is a film that <span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">rewards repeat viewings</span>, each time <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">revealing new details hidden in its 
+intricate design</span>. Nolan <span class="lx-highlight" data-idx="19" style="background-color:#C8E6C9;"><span class="lx-highlight" data-idx="20" style="background-color:#D2E3FC;">challenges audiences to engage actively, to question what they see, 
+and to confront the blurred line between dreams and reality</span></span>. Few films manage to be both a 
+summer spectacle and a meditation on the human condition—Inception <span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">achieves both with 
+style and substance</span>.
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="21" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/22</span> |
+          Pos <span id="posInfo">[81-139]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "cinematic puzzle box that continues to fascinate audiences", "color": "#C8E6C9", "startPos": 81, "endPos": 139, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nMovie Review: Inception (2010)\nChristopher Nolan\u2019s Inception is a ", "extractionText": "cinematic puzzle box that continues to fascinate audiences", "afterText": " \nmore than a decade after its release. At its core, the film is a heist story, but instead of vaults \nand jewels, the treasure lies within the human ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Inception</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">cinematic puzzle box</span>}</div>"}, {"index": 1, "class": "audience_impact", "text": "continues to fascinate audiences", "color": "#D2E3FC", "startPos": 107, "endPos": 139, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nMovie Review: Inception (2010)\nChristopher Nolan\u2019s Inception is a cinematic puzzle box that ", "extractionText": "continues to fascinate audiences", "afterText": " \nmore than a decade after its release. At its core, the film is a heist story, but instead of vaults \nand jewels, the treasure lies within the human ", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">fascination</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">cinematic puzzle box</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">audiences</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "intellectually stimulating and emotionally resonant", "color": "#C8E6C9", "startPos": 342, "endPos": 393, "beforeText": "the film is a heist story, but instead of vaults \nand jewels, the treasure lies within the human subconscious. Nolan crafts a narrative that is \nboth ", "extractionText": "intellectually stimulating and emotionally resonant", "afterText": ", blending science fiction spectacle \nwith deeply personal stakes.\nThe film follows Dom Cobb (Leonardo DiCaprio), a skilled \u201cextractor\u201d who steals sec", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">narrative</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">intellectually stimulating and emotionally resonant</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "layered structure", "color": "#C8E6C9", "startPos": 970, "endPos": 987, "beforeText": "ould allow \nCobb to return home to his children, but failure could trap him in a labyrinth of dreams \nforever.\nWhat makes Inception remarkable is its ", "extractionText": "layered structure", "afterText": ". Nolan constructs dreams within \ndreams, each with its own rules of time and physics. The famous \u201crotating hallway\u201d fight \nscene, shot practically wi", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">layered structure</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "commitment to grounding surreal concepts in tangible visuals", "color": "#C8E6C9", "startPos": 1180, "endPos": 1241, "beforeText": "ach with its own rules of time and physics. The famous \u201crotating hallway\u201d fight \nscene, shot practically with a massive spinning set, exemplifies his ", "extractionText": "commitment to grounding \nsurreal concepts in tangible visuals", "afterText": ". Hans Zimmer\u2019s score, with its iconic brass blasts derived \nfrom Edith Piaf\u2019s \u201cNon, je ne regrette rien,\u201d adds urgency and grandeur, making the film ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">his</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">commitment to grounding surreal concepts in tangible visuals</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "adds urgency and grandeur", "color": "#C8E6C9", "startPos": 1348, "endPos": 1373, "beforeText": "nding \nsurreal concepts in tangible visuals. Hans Zimmer\u2019s score, with its iconic brass blasts derived \nfrom Edith Piaf\u2019s \u201cNon, je ne regrette rien,\u201d ", "extractionText": "adds urgency and grandeur", "afterText": ", making the film feel \nboth epic and intimate.\nBeyond spectacle, Inception explores themes of memory, guilt, and the fragility of reality. \nCobb\u2019s em", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Hans Zimmer\u2019s score</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">urgency and grandeur</span>}</div>"}, {"index": 6, "class": "audience_impact", "text": "making the film feel both epic and intimate", "color": "#D2E3FC", "startPos": 1375, "endPos": 1419, "beforeText": "tangible visuals. Hans Zimmer\u2019s score, with its iconic brass blasts derived \nfrom Edith Piaf\u2019s \u201cNon, je ne regrette rien,\u201d adds urgency and grandeur, ", "extractionText": "making the film feel \nboth epic and intimate", "afterText": ".\nBeyond spectacle, Inception explores themes of memory, guilt, and the fragility of reality. \nCobb\u2019s emotional journey\u2014his inability to let go of Mal", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">epic, intimate</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">Hans Zimmer\u2019s score</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "explores themes of memory, guilt, and the fragility of reality", "color": "#C8E6C9", "startPos": 1449, "endPos": 1511, "beforeText": "d \nfrom Edith Piaf\u2019s \u201cNon, je ne regrette rien,\u201d adds urgency and grandeur, making the film feel \nboth epic and intimate.\nBeyond spectacle, Inception ", "extractionText": "explores themes of memory, guilt, and the fragility of reality", "afterText": ". \nCobb\u2019s emotional journey\u2014his inability to let go of Mal\u2014anchors the film. While audiences \ndebate whether the final spinning top falls or not, the ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Inception</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">explores themes of memory, guilt, and the fragility of reality</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "anchors the film", "color": "#C8E6C9", "startPos": 1570, "endPos": 1586, "beforeText": "\nBeyond spectacle, Inception explores themes of memory, guilt, and the fragility of reality. \nCobb\u2019s emotional journey\u2014his inability to let go of Mal\u2014", "extractionText": "anchors the film", "afterText": ". While audiences \ndebate whether the final spinning top falls or not, the true resolution lies in Cobb\u2019s choice to \nembrace his children, regardless ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Cobb\u2019s emotional journey</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">anchors the film</span>}</div>"}, {"index": 9, "class": "audience_impact", "text": "leaves us questioning not just the ending, but the nature of perception itself", "color": "#D2E3FC", "startPos": 1782, "endPos": 1861, "beforeText": "inning top falls or not, the true resolution lies in Cobb\u2019s choice to \nembrace his children, regardless of whether he is in reality or a dream. Nolan ", "extractionText": "leaves us \nquestioning not just the ending, but the nature of perception itself", "afterText": ".\nPerformances are uniformly strong. DiCaprio brings tortured intensity, Cotillard embodies \nboth allure and menace, and supporting players like Josep", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">curiosity, introspection</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">Nolan</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">us</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "Performances are uniformly strong", "color": "#C8E6C9", "startPos": 1863, "endPos": 1896, "beforeText": "s children, regardless of whether he is in reality or a dream. Nolan leaves us \nquestioning not just the ending, but the nature of perception itself.\n", "extractionText": "Performances are uniformly strong", "afterText": ". DiCaprio brings tortured intensity, Cotillard embodies \nboth allure and menace, and supporting players like Joseph Gordon-Levitt, Ellen Page, and \nT", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Performances</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">uniformly strong</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "tortured intensity", "color": "#C8E6C9", "startPos": 1914, "endPos": 1932, "beforeText": "or a dream. Nolan leaves us \nquestioning not just the ending, but the nature of perception itself.\nPerformances are uniformly strong. DiCaprio brings ", "extractionText": "tortured intensity", "afterText": ", Cotillard embodies \nboth allure and menace, and supporting players like Joseph Gordon-Levitt, Ellen Page, and \nTom Hardy add charm and wit. The ense", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">DiCaprio&#x27;s performance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">tortured intensity</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "embodies both allure and menace", "color": "#C8E6C9", "startPos": 1944, "endPos": 1976, "beforeText": "uestioning not just the ending, but the nature of perception itself.\nPerformances are uniformly strong. DiCaprio brings tortured intensity, Cotillard ", "extractionText": "embodies \nboth allure and menace", "afterText": ", and supporting players like Joseph Gordon-Levitt, Ellen Page, and \nTom Hardy add charm and wit. The ensemble elevates the film beyond its cerebral p", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Cotillard&#x27;s performance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Mixed</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">allure and menace</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "add charm and wit", "color": "#C8E6C9", "startPos": 2055, "endPos": 2072, "beforeText": "o brings tortured intensity, Cotillard embodies \nboth allure and menace, and supporting players like Joseph Gordon-Levitt, Ellen Page, and \nTom Hardy ", "extractionText": "add charm and wit", "afterText": ". The ensemble elevates the film beyond its cerebral premise, \nmaking it accessible and human.\nUltimately, Inception succeeds because it balances bloc", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">supporting players</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">charm and wit</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "elevates the film beyond its cerebral premise", "color": "#C8E6C9", "startPos": 2087, "endPos": 2132, "beforeText": "illard embodies \nboth allure and menace, and supporting players like Joseph Gordon-Levitt, Ellen Page, and \nTom Hardy add charm and wit. The ensemble ", "extractionText": "elevates the film beyond its cerebral premise", "afterText": ", \nmaking it accessible and human.\nUltimately, Inception succeeds because it balances blockbuster thrills with philosophical \ninquiry. It is a film th", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The ensemble</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">elevates the film</span>}</div>"}, {"index": 15, "class": "audience_impact", "text": "making it accessible and human", "color": "#D2E3FC", "startPos": 2135, "endPos": 2165, "beforeText": "porting players like Joseph Gordon-Levitt, Ellen Page, and \nTom Hardy add charm and wit. The ensemble elevates the film beyond its cerebral premise, \n", "extractionText": "making it accessible and human", "afterText": ".\nUltimately, Inception succeeds because it balances blockbuster thrills with philosophical \ninquiry. It is a film that rewards repeat viewings, each ", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">relatability, empathy</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The ensemble&#x27;s performance</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "balances blockbuster thrills with philosophical inquiry", "color": "#C8E6C9", "startPos": 2209, "endPos": 2265, "beforeText": "charm and wit. The ensemble elevates the film beyond its cerebral premise, \nmaking it accessible and human.\nUltimately, Inception succeeds because it ", "extractionText": "balances blockbuster thrills with philosophical \ninquiry", "afterText": ". It is a film that rewards repeat viewings, each time revealing new details hidden in its \nintricate design. Nolan challenges audiences to engage act", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Inception</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">balances blockbuster thrills with philosophical inquiry</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "rewards repeat viewings", "color": "#C8E6C9", "startPos": 2285, "endPos": 2308, "beforeText": "making it accessible and human.\nUltimately, Inception succeeds because it balances blockbuster thrills with philosophical \ninquiry. It is a film that ", "extractionText": "rewards repeat viewings", "afterText": ", each time revealing new details hidden in its \nintricate design. Nolan challenges audiences to engage actively, to question what they see, \nand to c", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">rewards repeat viewings</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "revealing new details hidden in its intricate design", "color": "#C8E6C9", "startPos": 2320, "endPos": 2373, "beforeText": "imately, Inception succeeds because it balances blockbuster thrills with philosophical \ninquiry. It is a film that rewards repeat viewings, each time ", "extractionText": "revealing new details hidden in its \nintricate design", "afterText": ". Nolan challenges audiences to engage actively, to question what they see, \nand to confront the blurred line between dreams and reality. Few films ma", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">revealing new details</span>}</div>"}, {"index": 19, "class": "opinion_statement", "text": "challenges audiences to engage actively, to question what they see, and to confront the blurred line between dreams and reality", "color": "#C8E6C9", "startPos": 2381, "endPos": 2509, "beforeText": "hrills with philosophical \ninquiry. It is a film that rewards repeat viewings, each time revealing new details hidden in its \nintricate design. Nolan ", "extractionText": "challenges audiences to engage actively, to question what they see, \nand to confront the blurred line between dreams and reality", "afterText": ". Few films manage to be both a \nsummer spectacle and a meditation on the human condition\u2014Inception achieves both with \nstyle and substance.\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Nolan</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">challenges audiences to engage actively</span>}</div>"}, {"index": 20, "class": "audience_impact", "text": "challenges audiences to engage actively, to question what they see, and to confront the blurred line between dreams and reality", "color": "#D2E3FC", "startPos": 2381, "endPos": 2509, "beforeText": "hrills with philosophical \ninquiry. It is a film that rewards repeat viewings, each time revealing new details hidden in its \nintricate design. Nolan ", "extractionText": "challenges audiences to engage actively, to question what they see, \nand to confront the blurred line between dreams and reality", "afterText": ". Few films manage to be both a \nsummer spectacle and a meditation on the human condition\u2014Inception achieves both with \nstyle and substance.\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">curiosity, introspection, fascination</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The film&#x27;s themes and narrative</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">audiences</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "achieves both with style and substance", "color": "#C8E6C9", "startPos": 2609, "endPos": 2648, "beforeText": "nfront the blurred line between dreams and reality. Few films manage to be both a \nsummer spectacle and a meditation on the human condition\u2014Inception ", "extractionText": "achieves both with \nstyle and substance", "afterText": ".\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Inception</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">achieves both with style and substance</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
